@@ -37,7 +37,7 @@ public class GoogleSearchSteps {
 	@When("user enters a text in google search bar")
 	public void user_enters_a_text_in_goole_search_bar() throws InterruptedException {
 		driver.findElement(By.name("q")).sendKeys("Hello !");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 
 	}
 
@@ -53,7 +53,7 @@ public class GoogleSearchSteps {
 		
 		driver.getPageSource().contains("Royalty");
 		
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		driver.close();
 		driver.quit();
 

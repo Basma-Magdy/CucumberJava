@@ -5,11 +5,9 @@
 #@SmokeScenario
 Feature: feature to test login functionality
 
- #@SmokeTest
-  
+ @SmokeTest
   Scenario Outline: Check login is successful with valid user credentials
-    Given browser is open
-    And user is on login page
+    Given user is on login page
     When user enters <username> and <password>
     And user pressed the login button
     Then user is navigated to the home page 
@@ -17,4 +15,17 @@ Feature: feature to test login functionality
     Examples: 
      | username | password |
      | Admin     | admin123    |
-     | usr2     | pass2    |
+     #| usr2     | pass2    |
+
+    
+  Scenario Outline: Check login is successful with valid user credentials
+    Given user is on login page
+    When user enters <username> and <password>
+    And user pressed the login button
+    Then user is navigated to the home page 
+     
+    Examples: 
+     | username | password |
+     | Admin     | admin123    |
+    
+    
