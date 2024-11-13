@@ -11,7 +11,7 @@ import io.cucumber.junit.Cucumber;
 // monochrome is true for a good formatting inside the console
 //Generate HTML Report and store it
 @RunWith(Cucumber.class)
-@CucumberOptions(features= "src/test/resources/Features/login.feature", glue = {"StepDefinitions"},
+@CucumberOptions(features= "src/test/resources/Features/Background.feature", glue = {"StepDefinitions"},
 monochrome = true,
 plugin = { "pretty","html:target/HTMLReports/htmlReport.html",
 					"json:target/JSONReports/jsonReport.json",

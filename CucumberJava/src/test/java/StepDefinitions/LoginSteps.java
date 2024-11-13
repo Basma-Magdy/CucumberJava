@@ -37,7 +37,7 @@ public class LoginSteps {
 	}
 	
 	// will run first before each scenario (lowest order)
-	@Before (order = 1)
+	@Before (value ="@SmokeTest",order = 1)
 	public void Setup2() {
 		
 		System.out.println("=== I'm inside Setup2  === ");
@@ -45,7 +45,7 @@ public class LoginSteps {
 	}
 	
 	//lower order runs last
-	@After (order = 1)
+	@After (value ="@SmokeTest", order = 1)
 	public void tearDown() {
 		
 		System.out.println("=== I'm inside Teardown === \n");
@@ -55,13 +55,13 @@ public class LoginSteps {
 		
 	}
 	// higher order runs first in the after annotation
-	@After(order = 2)
+	@After(value ="@SmokeTest", order = 2)
 	public void tearDown2() {
 		
 		System.out.println("=== I'm inside Teardown2 ===");
 		
 	}
-	
+	/*
 	@BeforeStep
 	public void beforeSteps() {
 	System.out.println("***********I'm inside before steps************");	
@@ -71,7 +71,7 @@ public class LoginSteps {
 	public void afterSteps() {
 		System.out.println("***************I'm inside after steps*************");	
 		}
-
+*/
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		
