@@ -11,14 +11,16 @@ import io.cucumber.junit.Cucumber;
 // monochrome is true for a good formatting inside the console
 //Generate HTML Report and store it
 @RunWith(Cucumber.class)
-@CucumberOptions(features= "src/test/resources/Features/Background.feature", glue = {"StepDefinitions"},
+@CucumberOptions(features= "src/test/resources/Features/GoogleSearch.feature", glue = {"StepDefinitions"},
 monochrome = true,
+plugin = {"json:target/cucumber.json"}
+/*
 plugin = { "pretty","html:target/HTMLReports/htmlReport.html",
 					"json:target/JSONReports/jsonReport.json",
-					"junit:target/JunitReports/junitReport.xml"}
+					"junit:target/JunitReports/junitReport.xml"}*/
 //tags ="@SmokeTest and @Regression"
 				)
 
-public class RunnerTest {
+public class TestRunner {
 
 }

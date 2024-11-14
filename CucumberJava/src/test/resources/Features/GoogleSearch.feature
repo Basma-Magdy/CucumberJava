@@ -1,6 +1,6 @@
 Feature: feature to test GoogleSearch functionality
 
-@SmokeTest  @Regression
+#@SmokeTest  @Regression
 
   Scenario: Validate that google search is working 
     Given Browser is open
@@ -9,3 +9,7 @@ Feature: feature to test GoogleSearch functionality
     And user hits enter
     Then user is navigated to search resuts
 
+  Scenario: sample2
+    Given 
+    When 
+    Then 
